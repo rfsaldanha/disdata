@@ -2,7 +2,7 @@
 #'
 #' This function aggregates data by grouping and time variables and return time series of same size.
 #'
-#' @param x a `tibble`.
+#' @param x a `data.frame` or `tibble`.
 #' @param g_var Grouping variable name.
 #' @param d_var Date variable. Must be of class `Date`.
 #' @param a_unit Aggregate unit. `day`, `week`, `month` or `year`.

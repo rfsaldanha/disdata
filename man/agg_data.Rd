@@ -7,7 +7,7 @@
 agg_data(x, g_var, d_var, a_unit, ...)
 }
 \arguments{
-\item{x}{a \code{tibble}.}
+\item{x}{a \code{data.frame} or \code{tibble}.}
 
 \item{g_var}{Grouping variable name.}
 
