@@ -11,6 +11,8 @@
 #' @return a `tibble`.
 #' @export
 #'
+#' @importFrom rlang .data
+#'
 #' @examples
 #' agg_data(x = dengue_rj, g_var = "ID_MN_RESI", d_var = "DT_SIN_PRI", a_unit = "week")
 #'
@@ -27,7 +29,7 @@ agg_data <- function(x, g_var, d_var, a_unit, ...){
     timetk::summarise_by_time(
       .date_var = !!dplyr::sym(d_var),
       .by = a_unit,
-      freq = sum(original_row, na.rm = TRUE),
+      freq = sum(.data$original_row, na.rm = TRUE),
       ...
     ) %>%
     dplyr::ungroup()
