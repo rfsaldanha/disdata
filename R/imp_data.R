@@ -6,19 +6,25 @@ imp_data <- function(x, g_var, g_var_candidate, g_var_nchar,
     # Create check variables
     dplyr::mutate(
       g_var_check = dplyr::if_else(
-        nchar(!!dplyr::sym(g_var)) == g_var_nchar & !is.na(!!dplyr::sym(g_var)),
+        nchar(!!dplyr::sym(g_var)) == g_var_nchar &
+          !is.na(!!dplyr::sym(g_var)),
         true = TRUE, false = FALSE
       ),
       g_var_candidate_check = dplyr::if_else(
-        nchar(!!dplyr::sym(g_var_candidate)) == g_var_nchar & !is.na(!!dplyr::sym(g_var_candidate)),
+        nchar(!!dplyr::sym(g_var_candidate)) == g_var_nchar &
+          !is.na(!!dplyr::sym(g_var_candidate)),
         true = TRUE, false = FALSE
       ),
       d_var_check = dplyr::if_else(
-        !is.na(!!dplyr::sym(d_var)) & !!dplyr::sym(d_var) >= d_var_min & !!dplyr::sym(d_var) <= d_var_max,
+        !is.na(!!dplyr::sym(d_var)) &
+          !!dplyr::sym(d_var) >= d_var_min &
+          !!dplyr::sym(d_var) <= d_var_max,
         true = TRUE, false = FALSE
       ),
       d_var_candidate_check = dplyr::if_else(
-        !is.na(!!dplyr::sym(d_var_candidate)) & !!dplyr::sym(d_var_candidate) >= d_var_min & !!dplyr::sym(d_var_candidate) <= d_var_max,
+        !is.na(!!dplyr::sym(d_var_candidate)) &
+          !!dplyr::sym(d_var_candidate) >= d_var_min &
+          !!dplyr::sym(d_var_candidate) <= d_var_max,
         true = TRUE, false = FALSE
       )
     ) %>%
