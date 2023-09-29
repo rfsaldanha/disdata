@@ -1,3 +1,5 @@
+# Imputation of invalid variables using best candidate data
+
 #' @importFrom rlang :=
 imp_data <- function(x, g_var, g_var_candidate, g_var_nchar,
                      d_var, d_var_candidate, d_var_min, d_var_max,
