@@ -5,7 +5,7 @@
 \alias{dengue_rj}
 \title{Dengue data on Rio de Janeiro state, Brazil.}
 \format{
-An object of class \code{data.frame} with 8211 rows and 131 columns.
+An object of class \code{data.frame} with 8691 rows and 21 columns.
 }
 \usage{
 dengue_rj
