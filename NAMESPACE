@@ -3,4 +3,5 @@
 export("%>%")
 export(agg_data)
 importFrom(magrittr,"%>%")
+importFrom(rlang,":=")
 importFrom(rlang,.data)
