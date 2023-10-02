@@ -46,8 +46,8 @@ imp_data <- function(x, g_var, g_var_candidate, g_var_nchar,
 
   # Remove check variables
   res <- tmp %>%
-    dplyr::select(-g_var_check, -g_var_candidate_check,
-                  -d_var_check, -d_var_candidate_check)
+    dplyr::select(-"g_var_check", -"g_var_candidate_check",
+                  -"d_var_check", -"d_var_candidate_check")
 
   return(res)
 
