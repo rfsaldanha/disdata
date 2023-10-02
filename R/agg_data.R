@@ -3,9 +3,9 @@
 #' This function aggregates data by grouping and time variables and return time series of same size.
 #'
 #' @param x a `data.frame` or `tibble`.
-#' @param g_var Grouping variable name.
-#' @param d_var Date variable. Must be of class `Date`.
-#' @param a_unit Aggregate unit. `day`, `week`, `month` or `year`.
+#' @param g_var character. Grouping variable name.
+#' @param d_var date. Date variable. Must be of class `Date`.
+#' @param a_unit character. Aggregate unit. `day`, `week`, `month` or `year`.
 #' @param ... arguments passed to `timetk::summarise_by_time` function, including `.week_start`.
 #'
 #' @return a `tibble`.

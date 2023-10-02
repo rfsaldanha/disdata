@@ -9,11 +9,11 @@ agg_data(x, g_var, d_var, a_unit, ...)
 \arguments{
 \item{x}{a \code{data.frame} or \code{tibble}.}
 
-\item{g_var}{Grouping variable name.}
+\item{g_var}{character. Grouping variable name.}
 
-\item{d_var}{Date variable. Must be of class \code{Date}.}
+\item{d_var}{date. Date variable. Must be of class \code{Date}.}
 
-\item{a_unit}{Aggregate unit. \code{day}, \code{week}, \code{month} or \code{year}.}
+\item{a_unit}{character. Aggregate unit. \code{day}, \code{week}, \code{month} or \code{year}.}
 
 \item{...}{arguments passed to \code{timetk::summarise_by_time} function, including \code{.week_start}.}
 }
